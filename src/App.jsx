@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Route, Routes } from "react-router-dom";
+import { DataContextProvider } from "./contexts/DataContext";
+import NavigatorLayout from "./layouts/NavigatorLayout";
+import Home from "./pages/Home";
+import Greetings from "./pages/Greetings";
+import MyWords from "./pages/MyWords";
+export default function App() {
+  return (
+    <div>
+      <h1>Hi, Voca!</h1>
 
-function App() {
-    const [count, setCount] = useState(0)
-
-    return (
-        <>
-            <div>
-                <a href="https://vitejs.dev" target="_blank">
-                    <img src={viteLogo} className="logo" alt="Vite logo" />
-                </a>
-                <a href="https://react.dev" target="_blank">
-                    <img src={reactLogo} className="logo react" alt="React logo" />
-                </a>
-            </div>
-            <h1>Vite + React</h1>
-            <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>
-                    count is {count}
-                </button>
-                <p>
-                    Edit <code>src/App.jsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className="read-the-docs">
-                Click on the Vite and React logos to learn more
-            </p>
-        </>
-    )
+      <p>
+        {/**
+         * Routers tag 내부에 <Router>를 통해 URL과 Page를 Mapping합니다.
+         * Page Component들은 ./pages/ 내부에 있습니다.
+         * Page Component에 각각 필요한 Component를 호출하는 등 필요한 로직을 작성합니다.
+         * return하는 JSX문 내에서 <Link> 태그로 하이퍼링크를 생성할 수 있습니다.
+         * 
+         * -예제-
+         * 
+         * <Route path = "URL" , element = {<페이지 컴포넌트 />} // http://localhost:5173/URL에 맵핑된 <페이지 컴포넌트 /> 페이지
+         * 
+         * return(
+         *  <li>
+         *    <Link to="/URL"> </Link>  // http://localhost:5173/URL에 접속하는 링크
+         *  </li>
+         *  
+         * )
+         * 
+         * 
+         * */ }
+      </p>
+         
+      <DataContextProvider >
+        <Routes>
+          <Route path="/" element={<NavigatorLayout />}>
+            <Route index element={<Home />} />
+            <Route path="/greetings" element={<Greetings />} />
+            <Route path = "/mywords" element = {<MyWords />} />
+          </Route>
+        </Routes>
+      </DataContextProvider>
+    </div>
+  );
 }
 
-export default App
