@@ -1,0 +1,130 @@
+{
+    "wordList": [
+        {
+            "id": "1",
+            "eng": "resume",
+            "kor": [
+                "이력서"
+            ],
+            "example": {
+                "sentence": "Fax your resume and cover letter to the above number.",
+                "translation": "위 번호로 이력서와 자기소개서를 팩스로 보내주세요."
+            },
+            "bookmark": false
+        },
+        {
+            "id": "2",
+            "eng": "opening",
+            "kor": [
+                "공석",
+                "결원"
+            ],
+            "example": {
+                "sentence": "There are several job openings at the restaurant right now.",
+                "translation": "현재 그 식당에는 일자리가 몇 개 있다."
+            },
+            "bookmark": false
+        },
+        {
+            "id": "3",
+            "eng": "applicant",
+            "kor": [
+                "지원자"
+            ],
+            "example": {
+                "sentence": "Applicants are required to submit a resume.",
+                "translation": "지원자들은 이력서를 제출해야 한다."
+            },
+            "bookmark": false
+        },
+        {
+            "id": "4",
+            "eng": "requirement",
+            "kor": [
+                "필요조건"
+            ],
+            "example": {
+                "sentence": "A driver's license is a requirement of this job.",
+                "translation": "운전 면허증은 이 직업의 필요조건이다."
+            },
+            "bookmark": false
+        },
+        {
+            "id": "5",
+            "eng": "meet",
+            "kor": [
+                "만나다",
+                "(요구,조건을) 만족시키다"
+            ],
+            "example": {
+                "sentence": "Applicants must meet all the requirements for the job.",
+                "translation": "지원자들은 그 직책의 모든 필요조건을 만족시켜야 한다."
+            },
+            "bookmark": false
+        },
+        {
+            "id": "6",
+            "eng": "candidate",
+            "kor": [
+                "후보자",
+                "지원자"
+            ],
+            "example": {
+                "sentence": "Five candidates will be selected for final interviews.",
+                "translation": "5명의 후보자가 최종 면접을 위해 선발될 것이다."
+            },
+            "bookmark": false
+        },
+        {
+            "id": "7",
+            "eng": "meet",
+            "kor": [
+                "만나다",
+                "(요구,조건을) 만족시키다"
+            ],
+            "example": {
+                "sentence": "Applicants must meet all the requirements for the job.",
+                "translation": "지원자들은 그 직책의 모든 필요조건을 만족시켜야 한다."
+            },
+            "bookmark": false
+        },
+        {
+            "id": "8",
+            "eng": "highly",
+            "kor": [
+                "매우",
+                "대단히"
+            ],
+            "example": {
+                "sentence": "The experience makes you highly qualified for the job.",
+                "translation": "경험이 직업에 매우 자격이 있게 한다."
+            },
+            "bookmark": false
+        },
+        {
+            "id": "9",
+            "eng": "interview",
+            "kor": [
+                "면접",
+                "면접을 보다"
+            ],
+            "example": {
+                "sentence": "The interviews are being held in meeting room three.",
+                "translation": "면접은 3번 회의실에서 이루어지고 있다."
+            },
+            "bookmark": false
+        },
+        {
+            "id": "10",
+            "eng": "hire",
+            "kor": [
+                "고용하다"
+            ],
+            "example": {
+                "sentence": "The company expects to hire several new employees next month.",
+                "translation": "회사는 다음 달에 신입사원 몇 명을 고용할 계획이다."
+            },
+            "bookmark": false
+        }
+    ]
+}
