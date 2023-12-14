@@ -5,7 +5,8 @@ import Home from "./pages/Home";
 import MyWords from "./pages/MyWords";
 import { Heading } from '@radix-ui/themes';
 
-export default function App() {
+const App = () => {
+
     return (
         <div>
             <Heading>Woori Voca</Heading>
@@ -44,3 +45,4 @@ export default function App() {
     );
 }
 
+export default App
