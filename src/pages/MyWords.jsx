@@ -1,14 +1,13 @@
 import React from 'react'
-import TestComponentB from '../components/TestComponentB'
+import { WordProvider } from '../contexts/WordsContext'
+import WordList from '../components/words/WordList'
 
 const MyWords = () => {
-  return (
-    <div>
-
-        <TestComponentB />
-
-    </div>
-  )
+    return (
+        <WordProvider>
+            <WordList></WordList>
+        </WordProvider>
+    )
 }
 
 export default MyWords

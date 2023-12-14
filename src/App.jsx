@@ -2,15 +2,16 @@ import { Route, Routes } from "react-router-dom";
 import { DataContextProvider } from "./contexts/DataContext";
 import NavigatorLayout from "./layouts/NavigatorLayout";
 import Home from "./pages/Home";
-import Greetings from "./pages/Greetings";
 import MyWords from "./pages/MyWords";
-export default function App() {
-  return (
-    <div>
-      <h1>Hi, Voca!</h1>
+import { Heading } from '@radix-ui/themes';
 
-      <p>
-        {/**
+export default function App() {
+    return (
+        <div>
+            <Heading>Woori Voca</Heading>
+
+            <p>
+                {/**
          * Routers tag 내부에 <Router>를 통해 URL과 Page를 Mapping합니다.
          * Page Component들은 ./pages/ 내부에 있습니다.
          * Page Component에 각각 필요한 Component를 호출하는 등 필요한 로직을 작성합니다.
@@ -29,18 +30,17 @@ export default function App() {
          * 
          * 
          * */ }
-      </p>
-         
-      <DataContextProvider >
-        <Routes>
-          <Route path="/" element={<NavigatorLayout />}>
-            <Route index element={<Home />} />
-            <Route path="/greetings" element={<Greetings />} />
-            <Route path = "/mywords" element = {<MyWords />} />
-          </Route>
-        </Routes>
-      </DataContextProvider>
-    </div>
-  );
+            </p>
+
+            <DataContextProvider >
+                <Routes>
+                    <Route path="/" element={<NavigatorLayout />}>
+                        <Route index element={<Home />} />
+                        <Route path="/myWords" element={<MyWords />} />
+                    </Route>
+                </Routes>
+            </DataContextProvider>
+        </div>
+    );
 }
 
