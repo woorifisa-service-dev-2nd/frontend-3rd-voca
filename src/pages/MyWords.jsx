@@ -1,10 +1,11 @@
 import React from 'react'
+import TestComponentB from '../components/TestComponentB'
 
 const MyWords = () => {
   return (
     <div>
 
-        <p>My Words Page</p>
+        <TestComponentB />
 
     </div>
   )

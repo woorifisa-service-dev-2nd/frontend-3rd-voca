@@ -1,19 +1,20 @@
-import React from 'react'
-import { useDataContext } from '../context/DataContext'
-function testComponent() {
-    const data = useDataContext();
-
-    console.log(data)
+import React from 'react';
+import { useDataContext } from '../contexts/DataContext';
+function TestComponent() {
+    const context = useDataContext();
+    const dataDispatch = context.dataDispatch;
+    const dispatch = () => dataDispatch({type:'actionA'})
+    
   return (
-    <div>
-        <div>
-          {/** Test context data */}
-        {data}
-        </div>
-      
+    <div >
+      <div >
+        <button onClick = {() => dispatch()}>DISPATCH</button>
+            
+      </div>
+      {context.data}
     </div>
     
   )
 }
 
-export default testComponent
+export default TestComponent

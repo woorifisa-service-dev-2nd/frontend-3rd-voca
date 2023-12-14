@@ -1,38 +1,42 @@
-import { Routes, Route, Outlet, Link } from "react-router-dom";
-import { useState, useEffect} from "react";
-import { DataContextProvider } from "./context/DataContext";
+import { Route, Routes } from "react-router-dom";
+import { DataContextProvider } from "./contexts/DataContext";
+import NavigatorLayout from "./layouts/NavigatorLayout";
+import Home from "./pages/Home";
 import Greetings from "./pages/Greetings";
 import MyWords from "./pages/MyWords";
-
 export default function App() {
-  
-  
   return (
     <div>
-      <h1>Basic Example</h1>
+      <h1>Hi, Voca!</h1>
 
       <p>
-        This example demonstrates some of the core features of React Router
-        including nested <code>&lt;Route&gt;</code>s,{" "}
-        <code>&lt;Outlet&gt;</code>s, <code>&lt;Link&gt;</code>s, and using a
-        "*" route (aka "splat route") to render a "not found" page when someone
-        visits an unrecognized URL.
+        {/**
+         * Routers tag 내부에 <Router>를 통해 URL과 Page를 Mapping합니다.
+         * Page Component들은 ./pages/ 내부에 있습니다.
+         * Page Component에 각각 필요한 Component를 호출하는 등 필요한 로직을 작성합니다.
+         * return하는 JSX문 내에서 <Link> 태그로 하이퍼링크를 생성할 수 있습니다.
+         * 
+         * -예제-
+         * 
+         * <Route path = "URL" , element = {<페이지 컴포넌트 />} // http://localhost:5173/URL에 맵핑된 <페이지 컴포넌트 /> 페이지
+         * 
+         * return(
+         *  <li>
+         *    <Link to="/URL"> </Link>  // http://localhost:5173/URL에 접속하는 링크
+         *  </li>
+         *  
+         * )
+         * 
+         * 
+         * */ }
       </p>
-
-      {/* Routes nest inside one another. Nested route paths build upon
-            parent route paths, and nested route elements render inside
-            parent route elements. See the note about <Outlet> below. */}
+         
       <DataContextProvider >
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/" element={<NavigatorLayout />}>
             <Route index element={<Home />} />
-              <Route path="greetings" element={<Greetings />} />
-              <Route path="mywords" element={<MyWords />} />
-
-            {/* Using path="*"" means "match anything", so this route
-                  acts like a catch-all for URLs that we don't have explicit
-                  routes for. */}
-            <Route path="*" element={<NoMatch />} />
+            <Route path="/greetings" element={<Greetings />} />
+            <Route path = "/mywords" element = {<MyWords />} />
           </Route>
         </Routes>
       </DataContextProvider>
@@ -40,69 +44,3 @@ export default function App() {
   );
 }
 
-function Layout() {
-  return (
-    <div>
-      {/* A "layout route" is a good place to put markup you want to
-          share across all the pages on your site, like navigation. */}
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/greetings">Greetings</Link>
-          </li>
-          <li>
-            <Link to="/mywords">mywords</Link>
-          </li>
-          <li>
-            <Link to="/nothing-here">Nothing Here</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <hr />
-
-      {/* An <Outlet> renders whatever child route is currently active,
-          so you can think about this <Outlet> as a placeholder for
-          the child routes we defined above. */}
-      <Outlet />
-    </div>
-  );
-}
-
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-    </div>
-  );
-}
-
-function NoMatch() {
-  return (
-    <div>
-      <h2>Nothing to see here!</h2>
-      <p>
-        <Link to="/">Go to the home page</Link>
-      </p>
-    </div>
-  );
-}
