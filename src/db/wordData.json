@@ -77,14 +77,14 @@
 		},
 		{
 			"id": "7",
-			"eng": "meet",
+			"eng": "book",
 			"kor": [
-				"만나다",
-				"(요구,조건을) 만족시키다"
+				"책",
+				"예약하다"
 			],
 			"example": {
-				"sentence": "Applicants must meet all the requirements for the job.",
-				"translation": "지원자들은 그 직책의 모든 필요조건을 만족시켜야 한다."
+				"sentence": "Book early to avoid disappointment.",
+				"translation": "실망하시지 않도록 일찍 예약해 주세요."
 			},
 			"bookmark": false
 		},
