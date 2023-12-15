@@ -29,7 +29,8 @@ const MyWords = () => {
                                     marginTop: '10px',
                                     width: '300px',
                                     padding: '30px',
-                                    fontSize: '20px'
+                                    fontSize: '20px',
+                                    cursor: 'pointer'
                                 }}
                             >
                                 <PlusCircledIcon width="16" height="16" />
