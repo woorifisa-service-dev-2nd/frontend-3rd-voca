@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Cross2Icon } from '@radix-ui/react-icons';
-import './form.css';
+import '../../../css/form.css';
 
 const WordForm = ({ title, sourceWord, buttons }) => {
     const [eng, setEng] = useState(sourceWord ? sourceWord.eng : '');
-    const [kor, setKor] = useState(sourceWord ? sourceWord.kor : []);
+    const [kor, setKor] = useState(sourceWord ? sourceWord.kor : ['']);
     const [sentence, setSentence] = useState(sourceWord ? sourceWord.example.sentence : '');
     const [translation, setTranslation] = useState(sourceWord ? sourceWord.example.translation : '');
 
@@ -42,9 +42,8 @@ const WordForm = ({ title, sourceWord, buttons }) => {
                         KOREA
                     </label>
                     <div>
-                        {kor.length === 0 ?
-                            <input className="Input" id="kor" type="text" value={''} onChange={e => { setKor([...kor, e.target.value]) }} />
-                            : kor.map((str, idx) => <input key={idx} className="Input" id="kor" type="text" value={str} onChange={e => { setKor([...kor, e.target.value]) }} />)
+                        {
+                            kor.map((str, idx) => <input key={idx} className="Input" id="kor" type="text" value={str} onChange={e => { setKor([...kor, e.target.value]) }} />)
                         }
                     </div>
                     <label className="Label">
