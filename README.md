@@ -122,11 +122,34 @@
 # 4️⃣ 트러블 슈팅
 
 ## 💣 컴포넌트 재사용의 어려움
-기능 구현 후에 어떤 컴포넌트를 공통으로 처리하면 좋을지 고민하는데 시간이 오래걸렸음.
+- 기능 구현 후에 어떤 컴포넌트를 공통으로 처리하면 좋을지 고민하는데 시간이 오래걸렸음.
 
 
-## 💣 radix 라이브러리 활용
- radix-ui 라이브러리의 컴포넌트를 커스텀을 해야하는 요구사항이 있었는데 기술문서를 읽고 적용하는데 어려움이 있었음. 활용법을 숙지하는게 중요함을 느낌.
+## 💣 radix 라이브러리 커스텀
+ - 북마크 버튼을 눌렀을 때 이벤트 버블링으로 인해 부모 요소의 이벤트가 발생해 의도하지 않게 디테일 모달이 보이는 문제
+ - radix-ui 라이브러리의 컴포넌트를 커스텀을 해야했는데 실패 <br>
+    -> 기술 공식 문서를 읽고 활용법 숙지의 중요성을 느낌.
+```javascript
+  return (
+        <Dialog.Root>
+            <Dialog.Trigger> // 부모 요소->커스텀 필요
+                <Card>
+                    <Flex>
+                        <Text as="div" size="4" weight="bold">{eng}</Text>
+                        <Text as="div" size="2">{str}</Text>
+                        // 북마크 버튼(자식 요소)
+                        <Butcon onClick={() => { dispatch({ type: 'UPDATE', updateWord: { ...word, bookmark: !bookmark } }) }}
+                            isChecked={bookmark}
+                            checkedIcon={<BookmarkFilledIcon />}
+                            uncheckedIcon={<BookmarkIcon />}>
+                        </Butcon>
+                    </Flex>
+                </Card>
+            </Dialog.Trigger>
+            <EditForm sourceWord={word}></EditForm>
+        </Dialog.Root >
+    )
+```  
 
 ## 
 
