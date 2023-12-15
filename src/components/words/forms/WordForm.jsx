@@ -18,28 +18,18 @@ const WordForm = ({ title, sourceWord, buttons }) => {
             <Dialog.Overlay className="DialogOverlay" />
             <Dialog.Content className="DialogContent">
                 <Dialog.Title className="eng">{title}</Dialog.Title>
-
-                {/* {
-                    kor.map((str, idx) => <Dialog.Description key={idx} className="kor">
-                        {str}
-                    </Dialog.Description>)
-                }
-
-                <Dialog.Description className="sentence">
-                    {sentence}
-                </Dialog.Description>
-                <Dialog.Description className="translation">
-                    {translation}
-                </Dialog.Description> */}
                 <div id="label">
-                    <label className="Label" htmlFor="name">
-                        ENGLISH
-                    </label>
-                    <div>
-                        <input className="Input" id="eng" type="text" value={eng} onChange={e => { setEng(e.target.value) }} />
-                    </div>
+                    {
+                        sourceWord ? <div></div> : <div>
+                            <label className="Label" htmlFor="name">단어</label>
+                            <div>
+                                <input className="Input" id="eng" type="text" value={eng} onChange={e => { setEng(e.target.value) }} />
+                            </div>
+                        </div>
+                    }
+
                     <label className="Label" htmlFor="username">
-                        KOREA
+                        뜻
                     </label>
                     <div>
                         {
