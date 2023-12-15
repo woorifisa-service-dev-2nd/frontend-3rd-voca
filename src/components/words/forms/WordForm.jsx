@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
-import { Cross2Icon, BookmarkIcon, BookmarkFilledIcon, SpeakerLoudIcon } from '@radix-ui/react-icons';
+import { Cross2Icon } from '@radix-ui/react-icons';
 import './form.css';
 
 const WordForm = ({ title, sourceWord, buttons }) => {
@@ -8,7 +8,6 @@ const WordForm = ({ title, sourceWord, buttons }) => {
     const [kor, setKor] = useState(sourceWord ? sourceWord.kor : []);
     const [sentence, setSentence] = useState(sourceWord ? sourceWord.example.sentence : '');
     const [translation, setTranslation] = useState(sourceWord ? sourceWord.example.translation : '');
-    const [bookmark, setBookmark] = useState(sourceWord ? sourceWord.bookmark : false);
 
     const handleButtonClick = (button) => {
         button.onClick({ id: sourceWord?.id, eng, kor, example: { sentence, translation }, bookmark: sourceWord?.bookmark });
@@ -18,7 +17,6 @@ const WordForm = ({ title, sourceWord, buttons }) => {
         <Dialog.Portal>
             <Dialog.Overlay className="DialogOverlay" />
             <Dialog.Content className="DialogContent">
-                {bookmark ? <BookmarkFilledIcon /> : <BookmarkIcon />}
                 <Dialog.Title className="eng">{title}</Dialog.Title>
 
                 {/* {
