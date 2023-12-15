@@ -5,7 +5,7 @@ function NavigatorLayout() {
     return (
         <div>
             <nav>
-                <ul>
+                <ul id="navigator">
                     {pageList.map((page, idx) => <li key={idx}> <Link to={page.url}>{page.name}</Link> </li>)}
                 </ul>
             </nav>

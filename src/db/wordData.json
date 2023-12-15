@@ -47,7 +47,7 @@
 				"sentence": "A driver's license is a requirement of this job.",
 				"translation": "운전 면허증은 이 직업의 필요조건이다."
 			},
-			"bookmark": false
+			"bookmark": true
 		},
 		{
 			"id": "5",
@@ -86,7 +86,7 @@
 				"sentence": "Book early to avoid disappointment.",
 				"translation": "실망하시지 않도록 일찍 예약해 주세요."
 			},
-			"bookmark": false
+			"bookmark": true
 		},
 		{
 			"id": "8",
@@ -112,7 +112,7 @@
 				"sentence": "The interviews are being held in meeting room three.",
 				"translation": "면접은 3번 회의실에서 이루어지고 있다."
 			},
-			"bookmark": false
+			"bookmark": true
 		},
 		{
 			"id": "10",
@@ -123,6 +123,66 @@
 			"example": {
 				"sentence": "The company expects to hire several new employees next month.",
 				"translation": "회사는 다음 달에 신입사원 몇 명을 고용할 계획이다."
+			},
+			"bookmark": false
+		},
+		{
+			"id": "11",
+			"eng": "dummy1",
+			"kor": [
+				"더미데이터1"
+			],
+			"example": {
+				"sentence": "This is dummy.",
+				"translation": "더미데이터입니다."
+			},
+			"bookmark": false
+		},
+		{
+			"id": "12",
+			"eng": "dummy2",
+			"kor": [
+				"더미데이터2"
+			],
+			"example": {
+				"sentence": "This is dummy.",
+				"translation": "더미데이터입니다."
+			},
+			"bookmark": false
+		},
+		{
+			"id": "13",
+			"eng": "dummy3",
+			"kor": [
+				"더미데이터3"
+			],
+			"example": {
+				"sentence": "This is dummy.",
+				"translation": "더미데이터입니다."
+			},
+			"bookmark": false
+		},
+		{
+			"id": "14",
+			"eng": "dummy4",
+			"kor": [
+				"더미데이터4"
+			],
+			"example": {
+				"sentence": "This is dummy.",
+				"translation": "더미데이터입니다."
+			},
+			"bookmark": true
+		},
+		{
+			"id": "15",
+			"eng": "dummy5",
+			"kor": [
+				"더미데이터5"
+			],
+			"example": {
+				"sentence": "This is dummy.",
+				"translation": "더미데이터입니다."
 			},
 			"bookmark": false
 		}
