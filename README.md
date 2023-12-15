@@ -45,7 +45,6 @@
 ### 1. 페이지 라우팅
 - `Routers tag` 내부에 `<Router>`를 통해 URL과 Page를 Mapping.
 - `<Link>` 컴포넌트에 이동할 경로 작성
-- 새로고침해도 첫 화면으로 돌아가지 않고 리소스 유지 가능
 ```javascript
    <DataContextProvider >
     <Routes>
