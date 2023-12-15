@@ -1,18 +1,17 @@
 import { Route, Routes } from "react-router-dom";
-import { DataContextProvider } from "./contexts/DataContext";
 import NavigatorLayout from "./layouts/NavigatorLayout";
-import Home from "./pages/Home";
+import Bookmarks from "./pages/Bookmarks";
 import MyWords from "./pages/MyWords";
-import { Heading } from '@radix-ui/themes';
+import { Container, Heading, Theme } from '@radix-ui/themes';
+import { WordProvider } from "./contexts/WordsContext";
 
 const App = () => {
 
     return (
-        <div>
-            <Heading>Woori Voca</Heading>
+        <Container>
+            <Heading align="center">Woori Voca</Heading>
 
-            <p>
-                {/**
+            {/**
          * Routers tag 내부에 <Router>를 통해 URL과 Page를 Mapping합니다.
          * Page Component들은 ./pages/ 내부에 있습니다.
          * Page Component에 각각 필요한 Component를 호출하는 등 필요한 로직을 작성합니다.
@@ -30,18 +29,17 @@ const App = () => {
          * )
          * 
          * 
-         * */ }
-            </p>
+        * */ }
 
-            <DataContextProvider >
+            <WordProvider>
                 <Routes>
                     <Route path="/" element={<NavigatorLayout />}>
-                        <Route index element={<Home />} />
-                        <Route path="/myWords" element={<MyWords />} />
+                        <Route index element={<MyWords />} />
+                        <Route path="bookmarks" element={<Bookmarks />} />
                     </Route>
                 </Routes>
-            </DataContextProvider>
-        </div>
+            </WordProvider>
+        </Container>
     );
 }
 

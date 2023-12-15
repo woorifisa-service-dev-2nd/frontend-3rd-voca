@@ -1,18 +1,18 @@
-import Home from "./Home";
+import Bookmarks from "./Bookmarks";
 import MyWords from "./MyWords";
 
 const pageList = [
     {
         id: 1,
         url: "/",
-        name: 'Home',
-        component: <Home />
+        name: 'My Words',
+        component: <MyWords />
     },
     {
         id: 2,
-        url: "myWords",
-        name: 'My Words',
-        component: <MyWords />
+        url: "/bookmarks",
+        name: 'Bookmarked Words',
+        component: <Bookmarks />
     },
 
 ]
